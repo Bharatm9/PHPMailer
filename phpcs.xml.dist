@@ -40,3 +40,4 @@
         <exclude-pattern>*/language/phpmailer\.lang*\.php$</exclude-pattern>
     </rule>
 </ruleset>
+
