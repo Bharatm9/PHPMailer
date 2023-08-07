@@ -176,26 +176,3 @@ jobs:
           verbose: true
           # see https://github.com/codecov/codecov-action/issues/557
           token: ${{ secrets.CODECOV_TOKEN }}
-  
-
-  test-reports:
-    runs-on: ubuntu-22.04
-    needs: ['test']
-    name: "Test reports"
-
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v3
-
-      - name: Install Test Reporter
-        uses: dorny/test-reporter@v1
-
-      - name: Generate test reports
-        run: |
-          ./vendor/bin/phpunit --coverage-html build/coverage
-
-      - name: Upload test reports
-        uses: actions/upload-artifact@v2
-        with:
-          name: test-reports
-          path: build/coverage
