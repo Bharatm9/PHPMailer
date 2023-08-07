@@ -179,8 +179,6 @@ jobs:
   testreports:
     runs-on: ubuntu-latest
     steps:
-      - name: Run PHPUnit tests and generate reports
-        run: |
-          ls -la
-          # mkdir -p test-reports
-          phpunit --log-junit test-reports/test-report.xml
+      - name: Run Unit Test
+        run: composer test 
+          
