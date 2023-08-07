@@ -180,5 +180,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Unit Test
-        run: composer test 
-          
+        run: composer test
+      - name: Generate Test Reports
+        run: vendor/bin/phpunit --coverage-html ./build/reports/coverage
