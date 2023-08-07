@@ -181,5 +181,6 @@ jobs:
     steps:
       - name: Run PHPUnit tests and generate reports
         run: |
-          mkdir -p test-reports
+          ls -la
+          # mkdir -p test-reports
           phpunit --log-junit test-reports/test-report.xml
