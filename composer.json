@@ -61,6 +61,9 @@
             "PHPMailer\\PHPMailer\\": "src/"
         }
     },
+    "scripts": {
+    "test": "vendor/bin/phpunit"
+   },
     "autoload-dev": {
         "psr-4": {
             "PHPMailer\\Test\\": "test/"
