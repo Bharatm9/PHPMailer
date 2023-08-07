@@ -176,3 +176,10 @@ jobs:
           verbose: true
           # see https://github.com/codecov/codecov-action/issues/557
           token: ${{ secrets.CODECOV_TOKEN }}
+  testreports:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run PHPUnit tests and generate reports
+        run: |
+          mkdir -p test-reports
+          phpunit --log-junit test-reports/test-report.xml
