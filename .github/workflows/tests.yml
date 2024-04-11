@@ -3,7 +3,7 @@ name: "Tests"
 on:
   push:
   pull_request:
-  # Allow manually triggering the workflow.
+  # Allow manually triggering the workflow. 
   workflow_dispatch:
 
 permissions:
